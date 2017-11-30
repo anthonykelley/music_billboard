@@ -1,0 +1,12 @@
+<h1>Artists</h1>
+<% if @artists.any? %>
+  <% @artists.each do |artist| %>
+    <h3>
+      <%= link_to artist.name, artist_path(artist) %>
+    </h3>
+  <% end %>
+<% else %>
+  <h4> No Artists Listed!</h4>
+<% end %>
+
+<%= link_to 'Add New Artist', new_artist_path %>

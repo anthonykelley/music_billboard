@@ -1,0 +1,12 @@
+<h1>Music Billboards</h1>
+<% if @billboards.any? %>
+  <% @billboards.each do |billboard| %>
+    <h3>
+      <%= link_to billboard.title, billboard_path(billboard) %>
+    </h3>
+  <% end %>
+<% else %>
+  <h4> No Billboards Listed!</h4>
+<% end %>
+
+<%= link_to 'Add New Billboard', new_billboard_path %>

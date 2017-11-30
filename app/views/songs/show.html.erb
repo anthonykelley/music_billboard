@@ -1,0 +1,23 @@
+<h1>
+  <%= @song.name %>
+</h1>
+<blockquote>
+  Duration: <%= @song.duration %>
+</blockquote>
+<br />
+<blockquote>
+  Genre: <%= @song.genre %>
+</blockquote>
+<br />
+<blockquote>
+  Albumr: <%= @song.album %>
+</blockquote>
+<br />
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'All Posts', songs_path %>
+  <%= link_to 'Edit', edit_song_path(@song) %>
+  <%= link_to 'Delete', song_path(@song), method: :delete, data: {confirm: 'Really Delete?'} %>
+</div>

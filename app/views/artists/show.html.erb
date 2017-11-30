@@ -1,0 +1,12 @@
+<h1>
+  <%= @artist.name %>
+</h1>
+<br />
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'All Artists', artists_path %>
+  <%= link_to 'Edit', edit_artist_path(@artist) %>
+  <%= link_to 'Delete', artist_path(@artist), method: :delete, data: {confirm: 'Really Delete?'} %>
+</div>

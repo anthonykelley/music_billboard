@@ -1,0 +1,17 @@
+<h1>Add Song</h1>
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <br />
+  <%= f.label :duration %>
+  <%= f.text_field :duration, required: true %>
+  <br />
+  <%= f.label :genre %>
+  <%= f.text_field :genre, required: true %>
+  <br />
+  <%= f.label :album %>
+  <%= f.text_field :album, required: true %>
+  <br />
+  <%= f.submit %>
+<% end %>
+<%= link_to 'All Songs', songs_path, class: 'btn btn-primary' %>

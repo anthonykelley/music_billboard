@@ -1,0 +1,12 @@
+<h1>Songs</h1>
+<% if @songs.any? %>
+  <% @songs.each do |song| %>
+    <h3>
+      <%= link_to song.title, song_path(song) %>
+    </h3>
+  <% end %>
+<% else %>
+  <h4> No Songs Listed!</h4>
+<% end %>
+
+<%= link_to 'Add New Song', new_song_path %>

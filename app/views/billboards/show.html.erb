@@ -1,0 +1,12 @@
+<h1>
+  <%= @billboard.title %>
+</h1>
+<br />
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'All Posts', billboards_path %>
+  <%= link_to 'Edit', edit_billboard_path(@billboard) %>
+  <%= link_to 'Delete', billboard_path(@billboard), method: :delete, data: {confirm: 'Really Delete?'} %>
+</div>

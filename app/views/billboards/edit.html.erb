@@ -1,0 +1,10 @@
+<h1>Editing: <%= @billboard.title%></h1>
+
+<hr />
+
+<%= form_for @billboard do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true %>
+  <br />
+  <%= f.submit %>
+<% end %>
