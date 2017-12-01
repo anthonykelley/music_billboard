@@ -1,8 +1,12 @@
 <h1>Add Billboard</h1>
 <%= form_for @billboard do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, required: true %>
-  <br />
-  <%= f.submit %>
+  <div class='ui form'>
+    <%= f.label :title, autofocus: true %>
+    <%= f.text_field :title, required: true %>
+    <br />
+  <div class='test'>
+    <%= f.submit class: 'ui primary button' %>
+  </div>
+  </div>
 <% end %>
-<%= link_to 'All Billboards', billboards_path, class: 'btn btn-primary' %>
+<%= link_to 'All Billboards', billboards_path %>

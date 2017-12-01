@@ -1,12 +1,24 @@
 <h1>Music Billboards</h1>
 <% if @billboards.any? %>
-  <% @billboards.each do |billboard| %>
-    <h3>
-      <%= link_to billboard.title, billboard_path(billboard) %>
-    </h3>
-  <% end %>
+  <div class='ui grid'>
+    <% @billboards.each do |billboard| %>
+      <div class="center aligned four wide column">
+        <h3 class='ui card'>
+          <%= link_to billboard.title, billboard_path(billboard) %>
+        </h3>
+      </div>
+    <% end %>
+  </div>
 <% else %>
   <h4> No Billboards Listed!</h4>
 <% end %>
 
-<%= link_to 'Add New Billboard', new_billboard_path %>
+<div class="ui one column grid">
+  <div class="column">
+    <div class="three ui buttons">
+      <div class='test' class="column"><%= link_to 'Add New Billboard', new_billboard_path, class: 'ui primary button' %></div>
+      <div class='test' class="column"><%= link_to 'All Artists', artists_path, class: 'ui primary button' %></div>
+      <div class='test' class="column"><%= link_to 'All Songs', songs_path, class: 'ui primary button' %></div>
+    </div>
+  </div>
+  

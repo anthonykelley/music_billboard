@@ -1,12 +1,24 @@
 <h1>Artists</h1>
 <% if @artists.any? %>
-  <% @artists.each do |artist| %>
-    <h3>
-      <%= link_to artist.name, artist_path(artist) %>
-    </h3>
-  <% end %>
+  <div class='ui grid'>
+    <% @artists.each do |artist| %>
+      <div class="center aligned four wide column">
+        <h3 class='ui card'>
+          <%= link_to artist.name, artist_path(artist) %>
+        </h3>
+      </div>
+    <% end %>
+  </div>
 <% else %>
   <h4> No Artists Listed!</h4>
 <% end %>
 
-<%= link_to 'Add New Artist', new_artist_path %>
+
+<div class="ui one column grid">
+  <div class="column">
+    <div class="three ui buttons">
+      <div class='test' class="column"><%= link_to 'Add New Artist', new_artist_path, class: 'ui primary button' %></div>
+      <div class='test' class="column"><%= link_to 'All Billboards', billboards_path, class: 'ui primary button' %></div>
+      <div class='test' class="column"><%= link_to 'All Songs', songs_path, class: 'ui primary button' %></div>
+    </div>
+  </div>
